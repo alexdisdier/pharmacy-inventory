@@ -4,7 +4,8 @@
   "description": "This is a test to create a database using MongoDB. We'll be using the example of a pharmacist who needs an inventory for his drugs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",

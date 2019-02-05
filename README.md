@@ -58,11 +58,31 @@ Following a CRUD approach (Create, Read, Update, Delete)
 
 doctolib_api
 ├── .git
+│   ├── models
+│   │   ├── drug.js
+│   │   ├── log.js
+│   ├── routes
+│   │   ├── drug.js
+│   │   ├── log.js
 ├── .gitignore
 ├── index.js
 ├── package.json
 └── README.md
 
+```
+
+## Back up
+
+- export backup from mongodb in root directory.
+
+```bash
+mongodump --db dbName  --out export-data
+```
+
+- Create a database user in mLab (Heroku Add-on)
+
+```bash
+mongorestore -h ****** -d ******* -u <user> -p <password> ./export-data/dbName/
 ```
 
 ## Built With
@@ -79,7 +99,8 @@ doctolib_api
 ## Dependencies
 
 - [body-parser](https://www.npmjs.com/package/body-parser)
-- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [nodemon](https://www.npmjs.com/package/nodemon)
+- [express](https://www.npmjs.com/package/express)
 - [mongoose](https://www.npmjs.com/package/mongoose)
 
 ## Acknowledgments
