@@ -5,13 +5,13 @@ const mongoose = require("mongoose");
 
 app.use(bodyParser.json());
 
-
 /////////////////////////
 // DATABASE CONNECTION //
 /////////////////////////
 
-mongoose.connect(process.env.MONGODB_URI ||
-  "mongodb://localhost/pharmacy-inventory", {
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/pharmacy-inventory",
+  {
     useNewUrlParser: true
   }
 );
@@ -41,7 +41,7 @@ app.use(logRoutes);
 /////////////////////
 
 // Manage pages not found
-app.all("*", function (req, res) {
+app.all("*", function(req, res) {
   res.status(400).send("Page not found");
 });
 
