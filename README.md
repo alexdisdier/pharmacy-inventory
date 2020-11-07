@@ -1,6 +1,7 @@
 # Synopsis
 
 This is an API for a Pharmacy Inventory using using MongoDB.
+[check it out here](https://medecine-inventory.herokuapp.com/drug)
 
 ### Guidelines
 
